@@ -1,16 +1,21 @@
-# This is a sample Python script.
+# Guess the Number Game
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from colorama import Fore, Style
+import random
 
+attempts = 0
+notcorrect = False
+number = random.randint(1, 100)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+while not notcorrect:
+    print(Fore.LIGHTBLUE_EX + Style.BRIGHT + "\nI Have Selected a Number Between 1 and 100! Can You Guess it?" + Style.RESET_ALL)
+    guessed = input(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + "> " + Style.RESET_ALL)
 
+    if int(guessed) == number:
+        print(Fore.GREEN + Style.BRIGHT + "Nice! You Did it After " + str(attempts) + " Attempt(s)!" + Style.RESET_ALL)
+        break
+    else:
+        print(Fore.RED + Style.BRIGHT + "Wrong! Try Again!" + Style.RESET_ALL)
+        attempts = attempts + 1
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+exit(number)
