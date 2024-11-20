@@ -1,7 +1,9 @@
 # Guess the Number Game
-
+import colorama
 from colorama import Fore, Style
 import random
+
+colorama.init()
 
 attempts = 0
 notcorrect = False
