@@ -29,8 +29,8 @@ def user_input_or_guess_the_number(debug_mode=False):
                 print(Fore.GREEN + f"Congratulations! You successfully guessed my generated number in {attempts} attempts...")
                 print(Fore.RED + Style.BRIGHT +
                       "NOW ALL YOU HAVE TO DO IS!!!! GET THE **** OUT OF HERE!!!")
-                input(Fore.YELLOW + "Press Enter to exit and CRASH the program!")
-                exit("Program crashed on demand.")
+                input(Fore.YELLOW + "Press ENTER to get out")
+                exit("System: Program crashed on demand.")
         except ValueError:
             print(Fore.RED + "HEY, THAT'S AN INVALID NUMBER! YOU'RE MAKING ME ANGRY!!")
 
